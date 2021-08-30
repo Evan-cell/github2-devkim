@@ -1,3 +1,8 @@
+<form class="search-form">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="serach github" [(ngModel)]="username" name ="username" (keyup)="findProfile()">
+  </div>
+</form>
 <div *ngIf="profile">
   <div class="panel panel-default">
     <div class="panel-heading">
@@ -19,6 +24,12 @@
             <li *ngIf="profile.location" class="list-group-item">
               {{profile.location}}
             </li>
+            <li *ngIf="profile.blog" class="list-group-item">
+              {{profile.blog}}
+            </li>
+            <li *ngIf="profile.twitter_username" class="list-group-item">
+              {{profile.twitter_username}}
+            </li>
           </ul>
         </div>
         <div class="col-sm-4">
@@ -32,8 +43,14 @@
           <div class="panel panel-default">
             <div class="panel-heading">
               <h3 class="panel-title">
-                
+                Repos
               </h3>
+            </div>
+            <div class="panel-body" *ngFor="let repo of repos">
+              <p class="clearfix">
+                {{repo.name}} <a href="{{repo.html_url}}" class="btn btn-sm btn-warning pull-right">view project on github</a>
+              </p>
+              <p>{{repo.description}}</p>
             </div>
           </div>
         </div>

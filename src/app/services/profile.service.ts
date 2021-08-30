@@ -15,7 +15,13 @@ export class ProfileService {
   getProfileInfo(){
     return this.httpClient.get("https://api.github.com/users/" + this.useName + "?client_Id" + this.clientId + "&client_Secret=" + this.clientSecret)
     .pipe(map(res => res))
-
-
   }
+  getProfileRepos(){
+    return this.httpClient.get("https://api.github.com/users/" + this.useName + "/repos?client_Id" + this.clientId + "&client_Secret=" + this.clientSecret)
+    .pipe(map(res => res))
+  }
+  updateProfile(username : any){
+    this.useName = username
+  }
+
 }
