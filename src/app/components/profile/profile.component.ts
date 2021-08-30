@@ -7,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-
+  profile : any;
   constructor(private ProfileService: ProfileService) {
     this.ProfileService.getProfileInfo().subscribe(profile => {
       console.log(profile)
+      this.profile = profile;
     })
   }
   ngOnInit(): void {
