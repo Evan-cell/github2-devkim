@@ -10,22 +10,19 @@
         </div>
         <div class="col-sm-5">
           <ul class="list-group">
-            <li *ngIf="profile.bio" class="list-group-items">
+            <li *ngIf="profile.bio" class="list-group-item">
               {{profile.bio}}
             </li>
-            <li *ngIf="profile.bio" class="list-group-items">
-              {{profile.bio}}
+            <li *ngIf="profile.hirable" class="list-group-item">
+              available fore hire
             </li>
-            <li *ngIf="profile.bio" class="list-group-items">
-              {{profile.bio}}
-            </li>
-            <li *ngIf="profile.bio" class="list-group-items">
-              {{profile.bio}}
-            </li>
-            <li *ngIf="profile.bio" class="list-group-items">
-              {{profile.bio}}
+            <li *ngIf="profile.location" class="list-group-item">
+              {{profile.location}}
             </li>
           </ul>
+        </div>
+        <div class="col-sm-4">
+          
         </div>
       </div>
     </div>
