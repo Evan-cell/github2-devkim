@@ -1,5 +1,15 @@
 # Github2
 
+# Title
+Hi 👋, I'm Dev kim
+
+# Subtitle
+A passionate fullstack developer from kENYA
+
+# Description
+This app was created to help the user to search github accounts and repositories easly
+
+# Creation
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.2.
 
 ## Development server
