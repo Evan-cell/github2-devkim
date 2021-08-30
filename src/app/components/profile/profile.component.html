@@ -22,7 +22,13 @@
           </ul>
         </div>
         <div class="col-sm-4">
-          
+          <p>
+            <span class="label label-default">{{profile.followers}} Followers</span>
+            <span class="label label-primary">{{profile.following}} Following</span>
+            <span class="label label-success">{{profile.public_gists}} publicGists</span>
+            <span class="label label-info">{{profile.public_repos}} public repos</span>
+          </p>
+          <p><a href="{{profile.html_url}}" class="btn btn-success btn-sm">view profile on github</a></p>
         </div>
       </div>
     </div>
